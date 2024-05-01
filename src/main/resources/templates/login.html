@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/webjars/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/webjars/bootstrap-icons/1.10.3/font/bootstrap-icons.css">
+    <title>Authentication</title>
+</head>
+<body>
+    <div class="row mt-3">
+        <div class="col-md-6 offset-3">
+            <div class="card">
+                <div class="card-header">Authentication</div>
+                <div class="card-body">
+                    <form method="post" th:action="@{/login}">
+                        <div class="mb-2 mt-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input placeholder="Username" type="text" id="username" name="username" class="form-control">
+                        </div>
+                        <div class="mb-2 mt-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input placeholder="Password" type="text" id="password" name="password" class="form-control">
+                        </div>
+                        <div class="mb-2">
+                            <labe class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="remember-me" > Remember Me
+                            </labe>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
